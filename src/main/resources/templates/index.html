@@ -12,7 +12,7 @@
     <h1>LottoMat</h1>
 </div>
 <div>
-    <p class="description">Wylosowane liczby poniżej: </p>
+    <p class="description">Drawn numbers below: </p>
     <p class="radius">
         <span th:text="${lotto.first}" id="radius"></span>
         <span th:text="${lotto.second}"></span>
@@ -21,6 +21,14 @@
         <span th:text="${lotto.fiveth}"></span>
         <span th:text="${lotto.sixth}"></span>
     </p>
+    <p class="description">You predicted correct number(s) </p>
+
+<div class="buttons">
+    <p>
+    <button>Play again</button>
+        <button>Go to menu</button></p>
+</div>
+
 </div>
 
 </body>
