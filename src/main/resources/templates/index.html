@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LottoMat</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+
+</head>
+<body>
+<div class="header">
+    <h1>LottoMat</h1>
+</div>
+<div>
+    <p class="description">Wylosowane liczby poniżej: </p>
+    <p class="radius">
+        <span th:text="${lotto.first}" id="radius"></span>
+        <span th:text="${lotto.second}"></span>
+        <span th:text="${lotto.third}"></span>
+        <span th:text="${lotto.fourth}"></span>
+        <span th:text="${lotto.fiveth}"></span>
+        <span th:text="${lotto.sixth}"></span>
+    </p>
+</div>
+
+</body>
+</html>
