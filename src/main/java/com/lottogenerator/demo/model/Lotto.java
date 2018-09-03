@@ -17,6 +17,23 @@ public class Lotto {
 
     public Lotto () {}
 
+    public Lotto(Integer first, Integer second, Integer third, Integer fourth, Integer fiveth, Integer sixth) {
+        this.first = first;
+        this.second = second;
+        this.third = third;
+        this.fourth = fourth;
+        this.fiveth = fiveth;
+        this.sixth = sixth;
+    }
+
+    public Lotto(Integer first, Integer second, Integer third, Integer fourth, Integer fiveth) {
+        this.first = first;
+        this.second = second;
+        this.third = third;
+        this.fourth = fourth;
+        this.fiveth = fiveth;
+    }
+
     public Integer getFirst() {
         return first;
     }

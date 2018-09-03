@@ -6,10 +6,10 @@
     <link th:href="@{/css/style.css}" rel="stylesheet"/>
 </head>
 <body>
-<h1 class="headmaster">Lotto Mat</h1>
-<p class="rules">Please select 6 unique numbers below </p>
+<h1  class="headmaster">Multi Lotto Mat</h1>
+<p class="rules">Please choose 10 unique numbers</p>
 <div class="form">
-<form th:action="@{/lotto}" method="post">
+<form th:action="@{/multi}" method="post">
 
     <p>
         <select th:field="*{lotto.first}">
@@ -45,7 +45,6 @@
         </option>
     </select>
 
-
     <select th:field="*{lotto.fiveth}">
         <option value=""> -- </option>
         <option th:each="lotto : ${lotto2}"
@@ -61,6 +60,40 @@
                 th:text="${lotto}">
         </option>
     </select>
+
+        <select th:field="*{lotto.seventh}">
+            <option value=""> -- </option>
+            <option th:each="lotto : ${lotto2}"
+                    th:value="${lotto}"
+                    th:text="${lotto}">
+            </option>
+        </select>
+
+
+        <select th:field="*{lotto.eight}">
+            <option value=""> -- </option>
+            <option th:each="lotto : ${lotto2}"
+                    th:value="${lotto}"
+                    th:text="${lotto}">
+            </option>
+        </select>
+
+        <select th:field="*{lotto.nineth}">
+            <option value=""> -- </option>
+            <option th:each="lotto : ${lotto2}"
+                    th:value="${lotto}"
+                    th:text="${lotto}">
+            </option>
+        </select>
+
+
+        <select th:field="*{lotto.ten}">
+            <option value=""> -- </option>
+            <option th:each="lotto : ${lotto2}"
+                    th:value="${lotto}"
+                    th:text="${lotto}">
+            </option>
+        </select>
 
     <input type="submit" value="Confirm"/>
     </p>

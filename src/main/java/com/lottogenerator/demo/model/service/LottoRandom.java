@@ -21,23 +21,9 @@ public class LottoRandom {
         return list1;
     }
 
-    public List<Integer> userList(Lotto lotto) {
 
-        List<Integer> userList = new ArrayList<>();
-        Set<Integer> list = new HashSet<>();
 
-        list.add(lotto.getFirst());
-        list.add(lotto.getSecond());
-        list.add(lotto.getThird());
-        list.add(lotto.getFourth());
-        list.add(lotto.getFiveth());
-        list.add(lotto.getSixth());
-
-        userList.addAll(list);
-
-        return userList;
-    }
-
+    //Set values from List to object
     public void setComputerChoice(Lotto lotto, List<Integer> list) {
 
             lotto.setFirst(list.get(0));
@@ -49,6 +35,7 @@ public class LottoRandom {
 
     }
 
+    //Creation list chosen numbers
     public List<Integer> amountUniqueUserChoice(Lotto lotto){
 
         List<Integer> convertedList = new ArrayList<>();
@@ -67,6 +54,7 @@ public class LottoRandom {
         
     }
 
+    //checking how many numbers have been predicted by user
     public Integer correctNumbers (List<Integer> amountUniqueUserChoice, List<Integer> computerRandom) {
 
         Integer correctNumbers = 0;

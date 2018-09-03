@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LottoMat</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+
+</head>
+<body>
+<div class="header">
+    <h1>MultiLottoMat</h1>
+</div>
+<div>
+    <p class="description">Drawn numbers below: </p>
+    <p class="radius">
+        <span th:each="list : ${lists}" th:text="${list}"></span>
+
+    </p>
+    <p class="description">Your result is: <span th:text="${result}"></span> </p>
+</div>
+
+<<div>
+    <p class="description">Your numbers below: </p>
+    <p class="radius1">
+        <span th:each="list : ${listUser}" th:text="${list}"></span>
+
+    </p>
+</div>
+
+<div class="buttons">
+    <p>
+        <a th:href="@{/multi}"> <span>Play again</a></span>
+        <a th:href="@{/}"><span> Go to homepage</a></span>
+    </p>
+</div>
+
+</div>
+
+</body>
+</html>
