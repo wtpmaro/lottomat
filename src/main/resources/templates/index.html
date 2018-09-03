@@ -14,7 +14,7 @@
 <div>
     <p class="description">Drawn numbers below: </p>
     <p class="radius">
-        <span th:text="${lotto.first}" id="radius"></span>
+        <span th:text="${lotto.first}"></span>
         <span th:text="${lotto.second}"></span>
         <span th:text="${lotto.third}"></span>
         <span th:text="${lotto.fourth}"></span>
@@ -22,6 +22,20 @@
         <span th:text="${lotto.sixth}"></span>
     </p>
     <p class="description">You predicted correct number(s) </p>
+</div>
+
+<div>
+    <p class="description">User numbers below: </p>
+    <p class="radius">
+        <span th:text="${lotto3.first}"></span>
+        <span th:text="${lotto3.second}"></span>
+        <span th:text="${lotto3.third}"></span>
+        <span th:text="${lotto3.fourth}"></span>
+        <span th:text="${lotto3.fiveth}"></span>
+        <span th:text="${lotto3.sixth}"></span>
+    </p>
+    <p class="description">You predicted correct number(s) </p>
+</div>
 
 <div class="buttons">
     <p>
