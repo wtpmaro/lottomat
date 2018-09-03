@@ -19,21 +19,32 @@ public class LottoController {
     @PostMapping("")
     public String see (Model model,@ModelAttribute Lotto lottoUser) {
 
+
         Lotto lottoComp = new Lotto();
         LottoRandom computer = new LottoRandom();
 
-        if(computer.amountUniqueUserChoice(lottoUser) != 6) {
+        if((computer.amountUniqueUserChoice(lottoUser).size() != 6) ||
+        (computer.amountUniqueUserChoice(lottoUser).contains(null))){
             return "lottoForm";
         }
 
-        List<Integer> list= new ArrayList<>();
-        list = computer.computerRandom();
+        //Drawing numbers by computer
+        List<Integer> listComp= new ArrayList<>();
+        listComp = computer.computerRandom();
 
-        computer.setComputerChoice(lottoComp, list);
+        //User list (user choice)
+        List<Integer> listUser = computer.amountUniqueUserChoice(lottoUser);
+
+        //Set values from list to Lotto Object
+        computer.setComputerChoice(lottoComp, listComp);
+
+        //Creating result
+        Integer result = computer.correctNumbers(listUser, listComp);
 
         model.addAttribute("lotto",lottoComp);
         model.addAttribute("lotto2",lottoNumberList());
         model.addAttribute("lotto3",lottoUser);
+        model.addAttribute("lotto4",result);
 
         return "index";
     }

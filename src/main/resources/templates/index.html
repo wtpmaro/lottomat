@@ -21,12 +21,12 @@
         <span th:text="${lotto.fiveth}"></span>
         <span th:text="${lotto.sixth}"></span>
     </p>
-    <p class="description">You predicted correct number(s) </p>
+    <p class="description">Your result is: <span th:text="${lotto4}"></span> </p>
 </div>
 
 <div>
-    <p class="description">User numbers below: </p>
-    <p class="radius">
+    <p class="description">Your numbers below: </p>
+    <p class="radius1">
         <span th:text="${lotto3.first}"></span>
         <span th:text="${lotto3.second}"></span>
         <span th:text="${lotto3.third}"></span>
@@ -34,13 +34,13 @@
         <span th:text="${lotto3.fiveth}"></span>
         <span th:text="${lotto3.sixth}"></span>
     </p>
-    <p class="description">You predicted correct number(s) </p>
 </div>
 
 <div class="buttons">
     <p>
-    <button>Play again</button>
-        <button>Go to menu</button></p>
+        <a th:href="@{/lotto}"> <span>Play again</a></span>
+        <a th:href="@{/}"><span> Go to homepage</a></span>
+    </p>
 </div>
 
 </div>

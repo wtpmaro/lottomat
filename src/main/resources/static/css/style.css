@@ -28,43 +28,84 @@ p.radius span {
 
 }
 
+p.radius1 span {
+    margin: 10px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 1px solid black;
+    background-color: blue;
+    color: white;
+    font-size: 30px;
+    display: inline-block;
+
+}
+
 p.radius {
+    text-align: center;
+
+}
+
+p.radius1 {
     text-align: center;
 
 }
 p.description {
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
 }
+
+p.description span {
+    color: red;
+}
+
 
 div.buttons {
     width: 100%;
     height: 80px;
-    background-color: white;
 }
 
 div.buttons p {
-    margin: 0 auto;
+    text-align: center;
 }
 
-div.buttons p button {
-    height: 50px;
-    width: 130px;
+div.buttons p span {
+    height: 30px;
+    width: 175px;
     background-color: red;
     border: 1px solid white;
-    text-align: center;
-    margin: 0 auto;
-    display: block;
+    margin: 10px;
+    display: inline-block;
     color: white;
     font-size: 20px;
-    padding: 3px;
+    padding: 10px;
 }
 
-div.buttons p button:hover {
+div.buttons p span:hover {
     background-color: black;
 }
 
-div.buttons p button:active {
+div.buttons p span:active {
     background-color: orangered;
 }
 
+form p {
+    width: 800px;
+}
+
+form p label{
+    text-align: left;
+    margin-right: 30px;
+}
+
+div.form form{
+
+    width: 100px;
+    height: 30px;
+}
+
+div.form form select {
+    width: 100px;
+    text-align: center;
+}

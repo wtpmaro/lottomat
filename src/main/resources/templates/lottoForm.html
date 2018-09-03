@@ -6,24 +6,35 @@
     <link th:href="@{/css/style.css}" rel="stylesheet"/>
 </head>
 <body>
+<p>Please choose 6 unique numbers</p>
+<div class="form">
 <form th:action="@{/lotto}" method="post">
 
-    <label>Please choose your numbers: </label>
-    <select th:field="*{lotto.first}">
-        <option value=""> -- </option>
-        <option th:each="lotto : ${lotto2}"
+    <p>
+        <label>Please choose your 1 number: </label>
+        <select th:field="*{lotto.first}">
+            <option value=""> -- </option>
+            <option th:each="lotto : ${lotto2}"
                 th:value="${lotto}"
                 th:text="${lotto}">
-        </option>
-    </select>
-    <select th:field="*{lotto.second}">
-        <option value=""> -- </option>
-        <option th:each="lotto : ${lotto2}"
-                th:value="${lotto}"
-                th:text="${lotto}">
-        </option>
-    </select>
+            </option>
+        </select>
 
+    </p>
+
+    <p>
+        <label>Please choose your 2 number: </label>
+        <select th:field="*{lotto.second}">
+            <option value=""> -- </option>
+            <option th:each="lotto : ${lotto2}"
+                th:value="${lotto}"
+                th:text="${lotto}">
+            </option>
+    </select>
+    </p>
+
+    <p>
+    <label>Please choose your 3 number: </label>
     <select th:field="*{lotto.third}">
         <option value=""> -- </option>
         <option th:each="lotto : ${lotto2}"
@@ -31,7 +42,10 @@
                 th:text="${lotto}">
         </option>
     </select>
+    </p>
 
+    <p>
+    <label>Please choose your 4 number: </label>
     <select th:field="*{lotto.fourth}">
         <option value=""> -- </option>
         <option th:each="lotto : ${lotto2}"
@@ -39,7 +53,10 @@
                 th:text="${lotto}">
         </option>
     </select>
+    </p>
 
+    <p>
+    <label>Please choose your 5 number: </label>
     <select th:field="*{lotto.fiveth}">
         <option value=""> -- </option>
         <option th:each="lotto : ${lotto2}"
@@ -47,7 +64,10 @@
                 th:text="${lotto}">
         </option>
     </select>
+    </p>
 
+    <p>
+    <label>Please choose your 6 number: </label>
     <select th:field="*{lotto.sixth}">
         <option value=""> -- </option>
         <option th:each="lotto : ${lotto2}"
@@ -55,10 +75,10 @@
                 th:text="${lotto}">
         </option>
     </select>
+    </p>
 
-
-    <input type="submit"/>
+    <input type="submit" value="Confirm"/>
 </form>
-
+</div>
 </body>
 </html>

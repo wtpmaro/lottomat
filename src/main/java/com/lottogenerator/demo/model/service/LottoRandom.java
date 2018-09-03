@@ -49,8 +49,9 @@ public class LottoRandom {
 
     }
 
-    public Integer amountUniqueUserChoice(Lotto lotto){
+    public List<Integer> amountUniqueUserChoice(Lotto lotto){
 
+        List<Integer> convertedList = new ArrayList<>();
 
         Set<Integer> uniqueList= new HashSet<>();
         uniqueList.add(lotto.getFirst());
@@ -60,8 +61,25 @@ public class LottoRandom {
         uniqueList.add(lotto.getFiveth());
         uniqueList.add(lotto.getSixth());
 
-        return uniqueList.size();
+        convertedList.addAll(uniqueList);
+
+        return convertedList;
         
+    }
+
+    public Integer correctNumbers (List<Integer> amountUniqueUserChoice, List<Integer> computerRandom) {
+
+        Integer correctNumbers = 0;
+        for (int i=0; i < computerRandom.size(); i++) {
+            for (int j=0; j < amountUniqueUserChoice.size(); j++) {
+                if(computerRandom.get(i) == amountUniqueUserChoice.get(j)) {
+                    correctNumbers+=1;
+                }
+            }
+        }
+
+
+        return correctNumbers;
     }
 
 }
