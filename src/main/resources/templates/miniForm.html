@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+</head>
+<body>
+<h1 class="headmaster">Mini Lotto Mat</h1>
+<p class="rules">Please select 5 unique numbers below </p>
+<div class="form">
+<form th:action="@{/mini}" method="post">
+
+    <p>
+        <select th:field="*{lotto.first}">
+            <option value=""> -- </option>
+            <option th:each="lotto : ${lotto2}"
+                th:value="${lotto}"
+                th:text="${lotto}">
+            </option>
+        </select>
+
+
+        <select th:field="*{lotto.second}">
+            <option value=""> -- </option>
+            <option th:each="lotto : ${lotto2}"
+                th:value="${lotto}"
+                th:text="${lotto}">
+            </option>
+    </select>
+
+    <select th:field="*{lotto.third}">
+        <option value=""> -- </option>
+        <option th:each="lotto : ${lotto2}"
+                th:value="${lotto}"
+                th:text="${lotto}">
+        </option>
+    </select>
+
+    <select th:field="*{lotto.fourth}">
+        <option value=""> -- </option>
+        <option th:each="lotto : ${lotto2}"
+                th:value="${lotto}"
+                th:text="${lotto}">
+        </option>
+    </select>
+
+
+    <select th:field="*{lotto.fiveth}">
+        <option value=""> -- </option>
+        <option th:each="lotto : ${lotto2}"
+                th:value="${lotto}"
+                th:text="${lotto}">
+        </option>
+    </select>
+
+    <input type="submit" value="Confirm"/>
+    </p>
+</form>
+</div>
+</body>
+</html>
