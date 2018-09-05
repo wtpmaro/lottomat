@@ -121,3 +121,24 @@ div.form form input {
     height: 40px;
     width: 90px;
 }
+
+.buttons a.main {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.buttons span.home {
+    width: 400px;
+    border: 1px solid white;
+}
+
+.buttons span.home:hover {
+    background-color: #f390ff;
+}
+
+.buttons a:hover {
+    color: #8a288f;
+}
+
